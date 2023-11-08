@@ -3,7 +3,7 @@ name = "my_xml_parser"
 version = "0.1.1"
 edition = "2021"
 license = "MIT"
-description ="XML parser, which is used to check whether the "
+description ="XML parser, which can be used to parse XML to pairs of tokens"
 include = ["screenshot","/src", "COPYRIGHT"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

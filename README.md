@@ -1,4 +1,4 @@
-XML parser
+My XML parser
 ===
 
 XML parser, which can be used to parse XML to pairs of tokens 
@@ -20,3 +20,7 @@ pub fn main() -> anyhow::Result <()>{
     Ok(())
   }
   ```
+
+  Result will be like this:
+
+  [xml(0, 14, [entity(0, 14, [field(3, 10, [empty_entity(3, 10)])])])]

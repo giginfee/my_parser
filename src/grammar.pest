@@ -1,0 +1,39 @@
+text =  { (!"<"~!">" ~ASCII_ALPHANUMERIC)+}
+
+//text =  { ((!"<" ~ !">") ~ASCII_ALPHANUMERIC)+}
+// field = { text | (empty_entity | entity)* }
+
+
+field = { text | empty_entity | entity }
+entity = { "<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ field  ~ "</" ~ POP ~ ">" }
+empty_entity = { ("<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ "</" ~ POP ~ ">") }
+xml = {empty_entity| entity}
+
+
+// field = { empty_entity | entity | text }
+// entity = { "<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ field  ~ "</" ~ POP ~ ">" }
+// text =  { (ASCII_ALPHANUMERIC* ~ !"<"~!">") }
+// empty_entity = { ("<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ "</" ~ POP ~ ">") }
+// xml = {empty_entity| entity}
+
+
+
+// field = { empty_entity | entity | ASCII_ALPHANUMERIC+ | "" }
+
+// entity = {"<"~ PUSH( ASCII_ALPHANUMERIC+ )~">" ~ field ~ ("\n" ~ field)* ~ "</"~ POP~">"}
+
+// empty_entity = {("<"~ PUSH( ASCII_ALPHANUMERIC+ )~">" ~ "</"~ POP~">")}
+
+
+
+
+
+//entity = { "<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ field  ~ "</" ~ POP ~ ">" }
+
+// field = { empty_entity | entity | text  }
+
+// text =  { (ASCII_ALPHANUMERIC* ~ !"<"~!">") }
+
+// empty_entity = { ("<" ~ PUSH(ASCII_ALPHANUMERIC+) ~ ">" ~ "</" ~ POP ~ ">") }
+
+WHITESPACE = _{ " " | NEWLINE }

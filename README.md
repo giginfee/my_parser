@@ -1,8 +1,22 @@
-### MY PARSER
-My educational project for learning Rust
+XML parser
+===
 
-How to run:
-![running](screenshot.jpg)
+XML parser, which can be used to parse XML to pairs of tokens 
+
+
+### USAGE
+To bring this crate into your repository, either add `my_xml_parser` to your
+`Cargo.toml`, or run `cargo add my_xml_parser`.
 
 ### EXAMPLE
-list_parser::list("[1,2,3,5,8]")
+```rust
+ use my_xml_parser::*;
+  
+
+pub fn main() -> anyhow::Result <()>{
+
+    let successful_parse = parse_xml("<r><a></a></r>")?;
+    println!("{:?}", successful_parse);
+    Ok(())
+  }
+  ```

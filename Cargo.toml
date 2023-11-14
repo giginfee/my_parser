@@ -1,10 +1,10 @@
 [package]
 name = "my_xml_parser"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT"
-description ="XML parser, which can be used to parse XML to pairs of tokens"
-include = ["screenshot","/src", "COPYRIGHT"]
+description ="XML parser, which can be used to parse XML to pairs of tokens. See source https://github.com/giginfee/my_parser"
+include = ["/src", "COPYRIGHT"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

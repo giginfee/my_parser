@@ -3,6 +3,7 @@ My XML parser
 
 XML parser, which can be used to parse XML to pairs of tokens 
 
+[![crates.io](https://img.shields.io/crates/v/csv.svg)](https://crates.io/crates/my_xml_parser)
 
 ### USAGE
 To bring this crate into your repository, either add `my_xml_parser` to your
@@ -21,6 +22,13 @@ pub fn main() -> anyhow::Result <()>{
   }
   ```
 
+
   Result will be like this:
 
   [xml(0, 14, [entity(0, 14, [field(3, 10, [empty_entity(3, 10)])])])]
+  
+## Console use
+
+-cargo run xml "your xml"
+
+-"cargo run info."
